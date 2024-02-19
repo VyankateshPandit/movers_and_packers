@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&display=swap');
+
+
+
+body{
+    font-family: 'Bodoni Moda', serif;
+}
+
+
+.content{ display: flex;
+    align-items: center;
+
+}
+
+.images{     align-items: center;
+              
+              height: 520px;
+              overflow:hidden;
+              width: 700px;
+              scroll-snap-type: y mandatory;overflow-y: auto;
+}
+
+.images::-webkit-scrollbar{
+   display: none;
+}
+
+.images img{
+              scroll-snap-align: start;
+
+}
+
+img{    
+  height: fit-content;
+   justify-content: flex-start;
+  width: 700px;
+  animation: scroll 15s  infinite  ease-in-out  ;
+
+
+}
+
+.headings{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 100px;
+        
+}
+
+.headings h2 {
+    overflow: hidden; 
+    border-right: .15em solid orange;
+    white-space: nowrap; 
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(82, 98, 245); }
+  }
+
+.name{
+ font-size: 2.5rem;
+  font-weight: 600;
+
+
+}
+
+a{
+text-decoration: none;
+font-size: 1rem;
+color: black;
+padding: 10px;
+border: 2px solid black;
+border-radius: 10px;
+transition: all 0.3s ease-in-out;
+position: relative;
+top: 50px;
+
+}
+a:hover{
+text-decoration: none;
+font-size: 1rem;
+background-color: rgb(0, 0, 0);
+color: white;
+padding: 10px;
+border-radius: 10px;
+
+}
+
+@keyframes scroll{ 
+
+     
+
+         0%{
+            transform: translateY(  0px);
+
+         }
+
+         33%{
+            transform: translateY(-467px);
+
+         }
+
+         66%{
+            transform: translateY(-934px);
+
+         }
+
+         100%{ 
+
+
+             transform: translateY(-4px);
+
+         }
+
+}
