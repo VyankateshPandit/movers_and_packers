@@ -6,6 +6,7 @@ include("connection.php");
 
 if($_POST['submit']){
 
+     $name = $_POST['name'];
     $items = $_POST['item'];
     $item = implode(",",$items);
 
@@ -13,14 +14,14 @@ if($_POST['submit']){
 
 
 
-    $query = "INSERT INTO items VALUES('$item')";
+    $query = "INSERT INTO items VALUES('$name','$item')";
     
     $data = mysqli_query($conn,$query);
 
 
 if($data){
     
-    header("Location: app.html");
+    header("Location: app.php");
 
 }
 else{

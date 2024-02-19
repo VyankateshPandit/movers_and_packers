@@ -194,7 +194,7 @@ if($_POST['submit']){
 
      if($total == 1){
 
-          $_SESSION['EMAIL']= $email;
+          $_SESSION['email']= $email;
 
          header("Location: app.php");
          }

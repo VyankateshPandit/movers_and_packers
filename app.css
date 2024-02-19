@@ -140,7 +140,11 @@ input{
      overflow-y: scroll;    
            height: 400px; 
 
+
 }
+
+
+
 
 .items > input{
      align-self: flex-end;
@@ -174,6 +178,7 @@ input{
        transition: all 0.2s ease-in-out;
        margin-bottom: 20px;
        cursor: pointer;
+       
 }
 
 .btn:hover{
@@ -182,3 +187,10 @@ input{
      color: white;
 
 }
+
+
+input[type='text']{
+     border: 1px solid rgba(43, 42, 42, 0.404);
+     border-radius: 5px;
+}
+

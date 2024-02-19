@@ -1,22 +1,4 @@
-<?php 
 
-include("connection.php");
-
-
-session_start();
-
-
-$email=$_SESSION['EMAIL'];
-
-if($email==true){
-     
-}
-else{
-    header("Location: login.php");
-
-}
-
-?>
 
 
 <!DOCTYPE html>
@@ -60,9 +42,9 @@ else{
              
             <a href="#"> <i class="fa-solid fa-house"></i>
                 Home</a>
-            <a href="#"> <i class="fa-solid fa-screwdriver-wrench"></i> Services</a>
+            <a href="services.html"> <i class="fa-solid fa-screwdriver-wrench"></i> Services</a>
             <a href="#premium" onclick="myfunction()"><i class="fa-solid fa-crown" ></i> Premium</a>
-            <a href="#"><i class="fa-solid fa-phone"></i>Contact Us</a>
+            <a href="contact.php"><i class="fa-solid fa-phone"></i>Contact Us</a>
             <a class="account" href="logout.php"><i class="fa-solid fa-user"></i>  Your Account</a>
            </nav>
 
@@ -76,9 +58,9 @@ else{
                  <h2>Customer Info</h2>
 
 
-                <input type="text" placeholder="First Name " name="fname" required>
+                <input type="text" placeholder="Full Name " name="fname" required>
 
-                <input type="text" placeholder="Last Name " name="lname" required>
+                <input type="text" placeholder="Email ID " name="email" required>
 
                 <input type="text
                 " placeholder="Contact Number " name="cno" required>
@@ -130,6 +112,8 @@ else{
                  <input type="checkbox" name="item[]" value="Goods"> <label>Goods</label> 
 
                  <input type="checkbox" name="item[]" value="Storage "> <label>Storage</label> 
+
+                <input  type="text"  name="name" placeholder="Enter Email-ID ">
 
                  <input class="btn" type="submit" value="Save" name="submit" onclick="
                  item()">
