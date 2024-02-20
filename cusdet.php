@@ -2,18 +2,18 @@
 include("connection.php");
 
 
-// session_start();
+session_start();
 
 
-// $email=$_SESSION['email'];
+$email=$_SESSION['email'];
 
-// if($email==true){
+if($email==true){
      
-// }
-// else{
-//     header("Location: login.php");
+}
+else{
+    header("Location: login.php");
 
-// }
+}
 
 
 if($_POST['submit']){
@@ -25,8 +25,11 @@ if($_POST['submit']){
     $cadd = $_POST['cadd'];
     $cname = $_POST['cname'];
     $pcode = $_POST['pcode'];
+    $items = $_POST['item'];
+    $item = implode(",",$items);
 
-    $query = "INSERT INTO cusdet VALUES('$fname','$email','$cno','$hno','$cadd','$cname','$pcode')";
+
+    $query = "INSERT INTO cusdet VALUES('$fname','$email','$cno','$hno','$cadd','$cname','$pcode','$item')";
     
     $data = mysqli_query($conn,$query);
     
