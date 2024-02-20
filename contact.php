@@ -85,6 +85,12 @@
                    font-size:large;
                    margin: 10px;
                 }
+
+                .btn{
+                               display:flex;
+                               flex-direction: row;
+                               justify-content: space-between;
+                }
     </style>
 
 
@@ -107,7 +113,12 @@
           <label for="subject">Subject</label>
           <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       
+          <div class="btn">
           <input type="submit" value="Submit" name="submit">
+          <a href="app.php"><input type="submit" value="Go Back" name="submit"></a>
+
+          </div>
+       
       
         </form>
       </div>

@@ -2,18 +2,18 @@
 include("connection.php");
 
 
-session_start();
+// session_start();
 
 
-$email=$_SESSION['email'];
+// $email=$_SESSION['email'];
 
-if($email==true){
+// if($email==true){
      
-}
-else{
-    header("Location: login.php");
+// }
+// else{
+//     header("Location: login.php");
 
-}
+// }
 
 
 if($_POST['submit']){

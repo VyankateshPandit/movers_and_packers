@@ -45,7 +45,7 @@
             <a href="services.html"> <i class="fa-solid fa-screwdriver-wrench"></i> Services</a>
             <a href="#premium" onclick="myfunction()"><i class="fa-solid fa-crown" ></i> Premium</a>
             <a href="contact.php"><i class="fa-solid fa-phone"></i>Contact Us</a>
-            <a class="account" href="logout.php"><i class="fa-solid fa-user"></i>  Your Account</a>
+            <a class="account" href="logout.php"><i class="fa-solid fa-user"></i>  Logout</a>
            </nav>
 
            <div class="container">
