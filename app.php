@@ -1,5 +1,5 @@
-<?php
- session_start()
+<?php 
+session_start();
 
 ?>
 
@@ -32,12 +32,13 @@ span{
 
 nav{
      background-color: black;
-     width:1351px ;
+     width:100% ;
      height: 70px;
      color: white;
      display: flex;
      flex-direction: row;
-     padding: 20px;
+     flex-wrap: wrap;
+     padding: 10px;
      align-items: center;
      justify-content: space-between;
 }
@@ -81,12 +82,27 @@ i{
 .container{
           display: flex;
           flex-direction: row ;
-          margin: 30px;
+          margin: 25px;
+          height: fit-content;
+          flex-wrap: wrap;
           /* gap: 50px; */
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+          transition: all 1s ease-in-out;
 
 }
+
+
+#form1{
+              position: absolute;
+              top: 95px;
+}
+
+#form2{
+       display: none;
+    }
+
 
 h2{
      background-color: rgba(56, 56, 56, 0.062);
@@ -123,12 +139,14 @@ h2{
 .cus_det{
           display: flex;
           flex-direction: row;
-       
+            background-color: white;
            height: fit-content;      
           gap: 27px;     
           width: fit-content;
           border: 1px solid rgba(112, 111, 111, 0.589);
           padding: 20px;
+          transition: all 1s ease-in-out;
+
 
 }
 
@@ -234,6 +252,13 @@ input[type='text']{
 }
 
 
+.buttons{ margin-top: 20px;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-between;
+}
+
 </style>
 </head>
 <body>
@@ -242,22 +267,22 @@ input[type='text']{
     </script>
 
 
-    <script> 
+    <script src=" https://smtpjs.com/v3/smtp.js">
     
-    
-        window.alert("Welcome To Dashboard"); 
-
-    
-    
-    
+   
     function myfunction(){
 
         confirm("This Feature is Coming Soon");
       
     }
 
+    function submit(){
+         window.alert("Details Have been Saved");
+    }
    
-    
+ 
+
+
     </script>
            
     
@@ -269,16 +294,20 @@ input[type='text']{
             <a href="#"> <i class="fa-solid fa-house"></i>
                 Home</a>
             <a href="services.html"> <i class="fa-solid fa-screwdriver-wrench"></i> Services</a>
-            <a href="#premium" onclick="myfunction()"><i class="fa-solid fa-crown" ></i> Premium</a>
+            <a href="#premium" onclick="myfunction();"><i class="fa-solid fa-crown" ></i> Premium</a>
             <a href="contact.php"><i class="fa-solid fa-phone"></i>Contact Us</a>
             <a class="account" href="logout.php"><i class="fa-solid fa-user"></i>  Logout</a>
            </nav>
 
            <div class="container">
 
-            <form action="cusdet.php" method="post" autocomplete="off">
 
- 
+
+           <form id="form2" action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
+
+
+
+
              <section class="cus_det">
 
 
@@ -287,21 +316,22 @@ input[type='text']{
 
                  <h2>Customer Info</h2>
 
+                 <input type="hidden" name="access_key" value="5bb1cb5d-89c4-432c-ab99-c5f45445822f">
 
-                <input type="text" placeholder="Full Name " name="fname" required>
+                <input id="name" type="text" placeholder="Full Name "  name="Name " required>
 
-                <input type="text" placeholder="Email ID " name="email" required>
+                <input id="email" type="text" placeholder="Email ID " name="Email " required>
 
-                <input type="text
-                " placeholder="Contact Number " name="cno" required>
-
-
-                <input type="text" placeholder="Building Details" name="bdet" required>
-                <input type="text" placeholder="Complete Address " name="cadd" required>
-                <input type="text" placeholder="City" name="cname" required>
+                <input id="contact" type="text
+                " placeholder="Contact Number " name="Contact " required>
 
 
-                <input type="text" placeholder="Pincode" name="pcode" required>
+                <input id="add" type="text" placeholder="Building Details" name="Building Details " required>
+                <input id="add" type="text" placeholder="Complete Address " name="Complete Address " required>
+                <input id="add" type="text" placeholder="City" name="City " required>
+
+
+                <input id="add" type="text" placeholder="Pincode" name="Pincode :" required>
 
 
                 </div>
@@ -316,46 +346,203 @@ input[type='text']{
 
                     <h2>Select Your Items</h2>
    
-                    <input type="checkbox" name="item[]" value="TV"> <label>TV</label> 
+                    <input id="items" type="checkbox" name="Selected Items For Shifting :" value="TV"> <label>TV</label> 
    
-                    <input type="checkbox" name="item[]" value="Sofa"> <label>Sofa</label> 
+                    <input id="items"  type="checkbox" name="Selected Items For Shifting :" value="Sofa"> <label>Sofa</label> 
    
-                    <input type="checkbox" name="item[]" value="Table"> <label>Table</label> 
+                    <input id="items"  type="checkbox" name="Selected Items For Shifting :" value="Table"> <label>Table</label> 
    
-                    <input type="checkbox" name="item[]" value="Other Furniture"> <label>Other Furniture</label> 
+                    <input id="items"  type="checkbox" name="Selected Items For Shifting :" value="Other Furniture"> <label>Other Furniture</label> 
    
-                    <input type="checkbox" name="item[]" value="All Kitchen Applience"> <label>All Kitchen Applience</label> 
+                    <input id="items"  type="checkbox" name="Selected Items For Shifting :" value="All Kitchen Applience"> <label>All Kitchen Applience</label> 
    
-                    <input type="checkbox" name="item[]" value="All bedroom Applience"> <label>All bedroom Applience</label> 
+                    <input id="items"  type="checkbox" name="Selected Items For Shifting :" value="All bedroom Applience"> <label>All bedroom Applience</label> 
    
-                    <input type="checkbox" name="item[]" value="Bathroom Applience"> <label>Bathroom Applience</label> 
+                    <input id="items"  type="checkbox" name="Selected Items For Shifting :" value="Bathroom Applience"> <label>Bathroom Applience</label> 
    
-                    <input type="checkbox" name="item[]" value="Groceries"> <label>Groceries</label> 
+                    <input id="items"  type="checkbox" name="Selected Items For Shifting :" value="Groceries"> <label>Groceries</label> 
    
-                    <input type="checkbox" name="item[]" value="Goods"> <label>Goods</label> 
+                    <input id="items"  type="checkbox" name="Selected Items For Shifting :" value="Goods"> <label>Goods</label> 
    
-                    <input type="checkbox" name="item[]" value="Storage "> <label>Storage</label> 
+                    <input id="items"  type="checkbox" name="Selected Items For Shifting :" value="Storage "> <label>Storage</label> 
+
+                    <div class="buttons">
+                     <input id="back" class="btn" type="button" value="back" >
+                     <input class="btn" type="submit" value="Confirm Booking" >
+
+                    </div>
+                     
 
 
-                    <input class="btn" type="submit" value="Book Now" name="submit">
+                </form>
+
+                
+
+             </section>
+
+
+   
+             </section>
+
+
+
+             <form id="form1" action="" method="post" autocomplete="off"  >
+
+
+             <section class="cus_det">
+
+
+                <div class="cus_det_2">
+
+
+                 <h2>Customer Info</h2>
+
+
+                <input id="name" type="text" placeholder="Full Name "  name="fname" required>
+
+                <input id="email" type="text" placeholder="Email ID " name="email" required>
+
+                <input id="contact" type="text
+                " placeholder="Contact Number " name="cno" required>
+
+
+                <input id="add" type="text" placeholder="Building Details" name="bdet" required>
+                <input id="add" type="text" placeholder="Complete Address " name="cadd" required>
+                <input id="add" type="text" placeholder="City" name="cname" required>
+
+
+                <input id="add" type="text" placeholder="Pincode" name="pcode" required>
+
+
+                </div>
+
+
+
+
+                 <section class="items">
+
+
+
+
+                    <h2>Select Your Items</h2>
+   
+                    <input id="items" type="checkbox" name="item[]" value="TV"> <label>TV</label> 
+   
+                    <input id="items"  type="checkbox" name="item[]" value="Sofa"> <label>Sofa</label> 
+   
+                    <input id="items"  type="checkbox" name="item[]" value="Table"> <label>Table</label> 
+   
+                    <input id="items"  type="checkbox" name="item[]" value="Other Furniture"> <label>Other Furniture</label> 
+   
+                    <input id="items"  type="checkbox" name="item[]" value="All Kitchen Applience"> <label>All Kitchen Applience</label> 
+   
+                    <input id="items"  type="checkbox" name="item[]" value="All bedroom Applience"> <label>All bedroom Applience</label> 
+   
+                    <input id="items"  type="checkbox" name="item[]" value="Bathroom Applience"> <label>Bathroom Applience</label> 
+   
+                    <input id="items"  type="checkbox" name="item[]" value="Groceries"> <label>Groceries</label> 
+   
+                    <input id="items"  type="checkbox" name="item[]" value="Goods"> <label>Goods</label> 
+   
+                    <input id="items"  type="checkbox" name="item[]" value="Storage "> <label>Storage</label> 
+
+                    <div class="buttons">
+                    <input class="btn" type="submit" value="Save" name="submit"  >
+                     <input id="next" class="btn" type="submit" value="Next"  >
+                    </div>
+                   
+
+
+                      <script>
+
+                         
+                           var form1= document.getElementById('form1');
+                           var form2= document.getElementById('form2');
+
+
+                         var next= document.getElementById('next');
+                         var back= document.getElementById('back');
+
+                         
+                         next.onclick = function(){
+                       
+                        form1.style.display="none";
+                        form2.style.display="block";
+
+ }
+
+   
+ back.onclick = function(){
+                        
+                        form1.style.display="block";
+                        form2.style.display="none";
+
+ }
+
+
+                
+
+
+                      </script>
+
+
 
                 </form>
 
 
-             </section>
-
-
-   
-             </section>
-
-
-
-
-
            </div>
 
-
+           
 </body>
 </html>
 
 
+
+<?php 
+include("connection.php");
+error_reporting(0);
+
+
+
+
+if($_POST['submit']){
+
+    $fname = $_POST['fname'];
+    $email = $_POST['email'];
+    $cno = $_POST['cno'];
+    $bdet = $_POST['bdet'];
+    $cadd = $_POST['cadd'];
+    $cname = $_POST['cname'];
+    $pcode = $_POST['pcode'];
+    $items = $_POST['item'];
+    $item = implode(",",$items);
+
+
+
+
+
+    $query = "INSERT INTO cusdet VALUES('$fname','$email','$cno','$bdet','$cadd','$cname','$pcode','$item')";
+    
+    $data = mysqli_query($conn,$query);
+
+if($data==1){
+           echo '<script>   alert("Details Has Been Submitted , Click On Next");
+           window.location.href = "app.php";
+
+            
+            
+           </script>';
+
+}
+else{
+         echo "";
+}
+
+  
+    
+    }
+    
+
+
+
+?>

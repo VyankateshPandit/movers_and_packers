@@ -5,7 +5,6 @@
 include("connection.php");
 
 session_start();
-
 ?>
 
 
@@ -194,15 +193,19 @@ if($_POST['submit']){
 
      if($total == 1){
 
-          $_SESSION['email']= $email;
+          echo '<script>   alert("Welcome To Dashboard"); 
+          window.location.href = "app.php";
 
-         header("Location: app.php");
+          </script>';
          }
  
        
 
         else{
-          header("Location: pwd_er.php");
+          echo '<script>   alert(" Incorrect Details , Please Check Your Details Otherwise Create A New Account");
+          window.location.href = "login.php";
+
+          </script>';
 
 
         }
